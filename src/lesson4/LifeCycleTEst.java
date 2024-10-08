@@ -1,10 +1,10 @@
 package lesson4;
 
 public class LifeCycleTEst {
-	static final int	x = 10;	// ConstantValue
+	protected static final int	x = 10;	// ConstantValue
 	static final double	y = Math.random();
 
-	final int		z;
+	public final int		z;
 	final double 	t = Math.random();
 	
 	{
@@ -18,6 +18,7 @@ public class LifeCycleTEst {
 	}
 	
 	public LifeCycleTEst(/*LifeCycleTEst this, */int a) {
+		super();
 		// System.err.println("laskjdfkljdj");
 		this.z = a;
 	}
@@ -51,7 +52,12 @@ public class LifeCycleTEst {
 		test();
 	}
 	
-	static private void test() {
-		
+	public static void test() {
+		System.err.println("Life cycle static");
 	}
+	
+	public void testInstance() {
+		System.err.println("Life cycle instance");
+	}
+	
 }
