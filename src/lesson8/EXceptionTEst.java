@@ -4,7 +4,7 @@ public class EXceptionTEst {
 	static void error(int errno) throws RuntimeException, Exception, Throwable {
 		switch (errno) {
 			case 0 :
-				throw new RuntimeException("RTE!");
+				throw new RuntimeException("RTE!", new ArrayIndexOutOfBoundsException());
 			case 1 :
 				throw new Exception("EXCEPTION!");
 			case 2 :
